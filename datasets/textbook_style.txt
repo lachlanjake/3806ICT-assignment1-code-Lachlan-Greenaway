@@ -1,0 +1,6 @@
+forall x. P(x) -> exists x. P(x)
+exists x. forall y. R(x,y) -> forall y. exists x. R(x,y)
+forall x. (P(x) -> Q(x)) -> (forall x. P(x) -> forall x. Q(x))
+not forall x. P(x) -> exists x. not P(x)
+not exists x. P(x) -> forall x. not P(x)
+forall x. (P(x) and Q(x)) -> forall x. P(x)

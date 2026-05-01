@@ -1,0 +1,10 @@
+forall x. not not P(x) -> P(a)
+forall x. (P(x) and T) -> forall x. P(x)
+exists x. (P(x) or F) -> exists x. P(x)
+forall x. ((P(x) -> P(x)) and Q(x)) -> forall x. Q(x)
+forall x. (P(x) and F) -> exists x. Q(x)
+exists x. not not P(x) -> exists x. P(x)
+forall x. (T -> P(x)) -> forall x. P(x)
+exists x. (F -> P(x)) -> T
+forall x. ((P(x) or F) and (Q(x) or F)) -> forall x. (P(x) and Q(x))
+exists x. ((P(x) and T) or F) -> exists x. P(x)

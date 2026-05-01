@@ -1,0 +1,10 @@
+not not P(a) -> P(a)
+(P(a) and T) -> P(a)
+(P(a) or F) -> P(a)
+(P(a) and F) -> Q(a)
+(P(a) -> P(a)) -> T
+(T -> P(a)) -> P(a)
+(F -> P(a)) -> T
+(P(a) or T) -> T
+(P(a) and (Q(a) or F)) -> (P(a) and Q(a))
+not not (P(a) and T) -> P(a)

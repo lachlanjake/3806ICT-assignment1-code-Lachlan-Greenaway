@@ -1,0 +1,27 @@
+dataset,formula,parsed_formula,simplified_formula,baseline_proved,baseline_status,baseline_steps,baseline_max_open_branches,baseline_runtime_ms,improved_proved,improved_status,improved_steps,improved_max_open_branches,improved_runtime_ms
+textbook_style.txt,forall x. P(x) -> exists x. P(x),(forall x. P(x) -> exists x. P(x)),(forall x. P(x) -> exists x. P(x)),True,proved,10,1,0.179,True,proved,10,1,0.146
+textbook_style.txt,"exists x. forall y. R(x,y) -> forall y. exists x. R(x,y)","(exists x. forall y. R(x,y) -> forall y. exists x. R(x,y))","(exists x. forall y. R(x,y) -> forall y. exists x. R(x,y))",True,proved,11,1,0.149,True,proved,11,1,0.14
+textbook_style.txt,forall x. (P(x) -> Q(x)) -> (forall x. P(x) -> forall x. Q(x)),(forall x. (P(x) -> Q(x)) -> (forall x. P(x) -> forall x. Q(x))),(forall x. (P(x) -> Q(x)) -> (forall x. P(x) -> forall x. Q(x))),False,step limit,5000,2,39.225,False,step limit,5000,2,38.422
+textbook_style.txt,not forall x. P(x) -> exists x. not P(x),(not forall x. P(x) -> exists x. not P(x)),(not forall x. P(x) -> exists x. not P(x)),True,proved,6,1,0.04,True,proved,6,1,0.033
+textbook_style.txt,not exists x. P(x) -> forall x. not P(x),(not exists x. P(x) -> forall x. not P(x)),(not exists x. P(x) -> forall x. not P(x)),True,proved,6,1,0.032,True,proved,6,1,0.031
+textbook_style.txt,forall x. (P(x) and Q(x)) -> forall x. P(x),(forall x. (P(x) and Q(x)) -> forall x. P(x)),(forall x. (P(x) and Q(x)) -> forall x. P(x)),True,proved,5,1,0.035,True,proved,5,1,0.032
+simplification_heavy.txt,not not P(a) -> P(a),(not not P(a) -> P(a)),T,True,proved,4,1,0.026,True,proved,1,1,0.002
+simplification_heavy.txt,(P(a) and T) -> P(a),((P(a) and T) -> P(a)),T,True,proved,3,1,0.013,True,proved,1,1,0.002
+simplification_heavy.txt,(P(a) or F) -> P(a),((P(a) or F) -> P(a)),T,True,proved,4,2,0.021,True,proved,1,1,0.002
+simplification_heavy.txt,(P(a) and F) -> Q(a),((P(a) and F) -> Q(a)),T,True,proved,3,1,0.013,True,proved,1,1,0.002
+simplification_heavy.txt,(P(a) -> P(a)) -> T,((P(a) -> P(a)) -> T),T,True,proved,2,1,0.008,True,proved,1,1,0.002
+simplification_heavy.txt,(T -> P(a)) -> P(a),((T -> P(a)) -> P(a)),T,True,proved,4,2,0.015,True,proved,1,1,0.002
+simplification_heavy.txt,(F -> P(a)) -> T,((F -> P(a)) -> T),T,True,proved,2,1,0.007,True,proved,1,1,0.002
+simplification_heavy.txt,(P(a) or T) -> T,((P(a) or T) -> T),T,True,proved,2,1,0.008,True,proved,1,1,0.002
+simplification_heavy.txt,(P(a) and (Q(a) or F)) -> (P(a) and Q(a)),((P(a) and (Q(a) or F)) -> (P(a) and Q(a))),T,True,proved,7,3,0.034,True,proved,1,1,0.002
+simplification_heavy.txt,not not (P(a) and T) -> P(a),(not not (P(a) and T) -> P(a)),T,True,proved,5,1,0.025,True,proved,1,1,0.002
+mixed_formulae.txt,forall x. not not P(x) -> P(a),(forall x. not not P(x) -> P(a)),(forall x. P(x) -> P(a)),True,proved,5,1,0.039,True,proved,3,1,0.014
+mixed_formulae.txt,forall x. (P(x) and T) -> forall x. P(x),(forall x. (P(x) and T) -> forall x. P(x)),T,True,proved,5,1,0.044,True,proved,1,1,0.002
+mixed_formulae.txt,exists x. (P(x) or F) -> exists x. P(x),(exists x. (P(x) or F) -> exists x. P(x)),T,True,proved,6,2,0.033,True,proved,1,1,0.002
+mixed_formulae.txt,forall x. ((P(x) -> P(x)) and Q(x)) -> forall x. Q(x),(forall x. ((P(x) -> P(x)) and Q(x)) -> forall x. Q(x)),T,True,proved,5,1,0.044,True,proved,1,1,0.002
+mixed_formulae.txt,forall x. (P(x) and F) -> exists x. Q(x),(forall x. (P(x) and F) -> exists x. Q(x)),(forall x. F -> exists x. Q(x)),True,proved,4,1,0.028,True,proved,3,1,0.015
+mixed_formulae.txt,exists x. not not P(x) -> exists x. P(x),(exists x. not not P(x) -> exists x. P(x)),T,True,proved,6,1,0.033,True,proved,1,1,0.002
+mixed_formulae.txt,forall x. (T -> P(x)) -> forall x. P(x),(forall x. (T -> P(x)) -> forall x. P(x)),T,True,proved,6,2,0.035,True,proved,1,1,0.002
+mixed_formulae.txt,exists x. (F -> P(x)) -> T,(exists x. (F -> P(x)) -> T),T,True,proved,2,1,0.009,True,proved,1,1,0.002
+mixed_formulae.txt,forall x. ((P(x) or F) and (Q(x) or F)) -> forall x. (P(x) and Q(x)),(forall x. ((P(x) or F) and (Q(x) or F)) -> forall x. (P(x) and Q(x))),T,True,proved,15,3,0.125,True,proved,1,1,0.002
+mixed_formulae.txt,exists x. ((P(x) and T) or F) -> exists x. P(x),(exists x. ((P(x) and T) or F) -> exists x. P(x)),T,True,proved,7,2,0.046,True,proved,1,1,0.002
